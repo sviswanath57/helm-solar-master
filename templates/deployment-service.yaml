@@ -24,28 +24,28 @@ spec:
 
 ---
 
-apiVersion: v1 # Kubernetes API version
-kind: Service # Kubernetes resource kind we are creating
-metadata: # Metadata of the resource kind we are creating
-  name: taskmaster-ssvc
-spec:
-  selector:
-    app: taskmaster
-  ports:
-    - protocol: "TCP"
-      port: 80
-      targetPort: 8080 
-  type: NodePort # type of the service.
-# ---
-# apiVersion: v1
-# kind: service
-# metedata:
-#     name: taskmaster-ssvc
+# apiVersion: v1 # Kubernetes API version
+# kind: Service # Kubernetes resource kind we are creating
+# metadata: # Metadata of the resource kind we are creating
+#   name: taskmaster-ssvc
 # spec:
-#    type: NodePort
-#    ports:
-#    - targetPort: 80
-#      port: 80
-#      nodePort: 32000
-#    selector:
-#      app: taskmaster
+#   selector:
+#     app: taskmaster
+#   ports:
+#     - protocol: "TCP"
+#       port: 80
+#       targetPort: 8080 
+#   type: NodePort # type of the service.
+---
+apiVersion: v1
+kind: service
+metedata:
+    name: taskmaster-ssvc
+spec:
+   type: NodePort
+   ports:
+   - targetPort: 80
+     port: 80
+     nodePort: 32000
+   selector:
+     app: taskmaster
