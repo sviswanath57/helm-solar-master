@@ -15,8 +15,8 @@ spec:
     spec:
       containers:
         - name: taskmaster
-          image: prodtaskmaster:latest # Image that will be used to containers in the cluster.
-          # image: "sviswanath57:{{ .Values.deployment.imageVersion}}"
+          #image: prodtaskmaster:latest # Image that will be used to containers in the cluster.
+          image: "solarmaster:{{ .Values.deployment.imageVersion}}"
           imagePullPolicy: Always
           ports:
             - containerPort: 8080 # The port that the container is running on in the cluster
