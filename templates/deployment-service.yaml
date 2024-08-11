@@ -38,7 +38,7 @@ spec:
 #   type: NodePort # type of the service.
 ---
 apiVersion: v1
-kind: service
+kind: Service
 metedata:
     name: taskmaster-ssvc
 spec:
