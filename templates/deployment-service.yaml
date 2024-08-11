@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: taskmaster
-          image: sviswanath57/prodtaskmaster:latest # Image that will be used to containers in the cluster.
+          image: prodtaskmaster:latest # Image that will be used to containers in the cluster.
           # image: "sviswanath57:{{ .Values.deployment.imageVersion}}"
           imagePullPolicy: Always
           ports:
